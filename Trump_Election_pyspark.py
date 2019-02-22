@@ -52,10 +52,7 @@ def filterForDate(dfTrump,startDate,endDate):
 	return dfTrump.select("*").where( f.col("created_at").between(startDate,endDate)  )
 
 def groupByDateAndCalculateAverage(df):
-	return df.select('sentiment', 'created_at', 'id').groupBy('created_at').agg(f.avg('sentiment').alias('sentiment'), f.count('id').alias('tweet_daily')).withColumn('sentiment',f.col('sentiment') * 100.0)
-
-def groupByDateAndCount(df):
-	return df.select('sentiment', 'created_at').groupBy('created_at').agg(f.count('sentiment').alias('tweet_daily'))
+	return df.select('sentiment', 'created_at', 'user_id').groupBy('created_at').agg(f.avg('sentiment').alias('sentiment'), f.count('user_id').alias('tweet_daily')).withColumn('sentiment',f.col('sentiment') * 100.0)
 
 def toPandas(df):
 	return pd.DataFrame.from_records(df.collect(), columns=df.columns)
@@ -74,6 +71,7 @@ def saveGraphAsPng(graphName):
 	graphName = "graph_"+graphName+".png"
 	plt.savefig(graphName, format="PNG")
 	plt.figure()
+	plt.clf()
 
 def groupByUserId(df):
 	return df.groupBy('user_id')\
