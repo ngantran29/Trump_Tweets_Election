@@ -11,13 +11,17 @@ Interestingly, the average of sentiment score is always positive, before and aft
 ![Average Sentiment Score](graph_sentiment.png)
 
 ### Opinion Leaders and their average sentiment
-We combine three criteria of opinion leader to identify top ranked users leading the discourse about Trump on Twitter: Mentioned influence, Retweet Influence and Indegree Influence (number of followers).  
-Knowledge Influence (number of tweets)   
-<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_tweet_count_.png" width="250" height="250">   
-Mentioned Influence 
-<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_mentioned_count_.png" width="250" height="250">  
-Indegree Influence (number of followers)   
-<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_followers_count_.png" width="250" height="250">  
+We combine three criteria of opinion leader to identify top ranked users leading the discourse about Trump on Twitter: 
+
+##### Knowledge Influence (number of tweets)   
+<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_tweet_count_.png" width="350" height="350" align="center">   
+
+##### Mentioned Influence 
+<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_mentioned_count_.png" width="350" height="350" align="center">  
+
+##### Indegree Influence (number of followers)   
+<img src="https://github.com/ngantran29/Trump_Tweets_Election/blob/master/graph_followers_count_.png" width="350" height="350" align="center">  
+
 It turns out that opinion leaders are either Trump and his own supporters (his family members!) or news media agency such as CNN, ABC, FoxNews... and all of them were tweeting only positive/neutral post about Trump and the Election. Majority of most active users also posted positively in general. However, when we look at the average sentiment of tweets mention Trump in particular, the sentiment is actually negative, while Hilary Clinton is mentioned more positively.  
 
 However, this results is only the general overview using bag of words method. We can only conclude on the effectiveness of Trump's Twitter strategy in drawing the attention towards his presidency.
